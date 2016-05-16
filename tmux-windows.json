@@ -1,0 +1,12 @@
+{
+	"windows": [
+	{
+		"name": "editor",
+		"workdir": "/home/rsutton/Desktop",
+		"command": "vim testing.txt"
+	},
+	{
+		"name": "service"
+	}
+	]
+}

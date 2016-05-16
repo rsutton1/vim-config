@@ -1,26 +1,35 @@
 #!/usr/bin/python
 from subprocess import call
+import json
 import sys
 
 windows=[]
-with open('tmux-windows.cfg') as f:
-    for line in f:
-        session={}
-        session['name']=line
-        windows.append(session)
+with open('tmux-windows.json') as json_str:
+    data = json.load(json_str)
 
-if len(windows)==0:
-    print "No window names specified in tmux.cfg. One window name per line."
+if len(data['windows'])==0:
+    print "No windows specified in tmux-windows.json."
     sys.exit(1)
+
+windows = data['windows']
 
 call(["tmux","new","-s",sys.argv[1],"-d"])
 
-call(["tmux","rename-window","-t",sys.argv[1],windows[0]['name']])
-windows=windows[1:]
+i=0
+for window in windows:
+    workdir_arg = ""
+    if 'workdir' in window:
+        workdir_arg = "-c "+window['workdir']
 
-while len(windows)>0:
-    call(["tmux","new-window","-t",sys.argv[1],"-n",windows[0]['name'],"-d"])
-    windows=windows[1:]
+    command_arg = ""
+    if 'command' in window:
+        command_arg = window['command']
+
+    cmd = "tmux new-window -dk -t "+str(i)+" -n "+window['name']+" "+workdir_arg+" '"+command_arg+"'"
+
+    call(cmd, shell=True)
+
+    i+=1
 
 call(["tmux","attach","-t",sys.argv[1]])
 
