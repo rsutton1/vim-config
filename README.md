@@ -5,6 +5,8 @@ The scripts in this repo assume you already have vim or tmux installed.
 
 These scripts are [idempotent](http://stackoverflow.com/a/1077421). This means if the configuration ever gets into a weird state, you can simply rerun these scripts to start over.
 
+These scripts are tested and working with Ubuntu 14.04, vim 7.4, and tmux 1.8.
+
 ## How to use it
 
 Clone this repo to your local machine:
