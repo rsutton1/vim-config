@@ -1,11 +1,25 @@
 # vim-config
-Contains scripts to setup vim with my preferred configuration on a new machine.
+Contains scripts to setup vim and tmux with the Rob Sutton preferred configuration on a new machine.
 
-WARNING: ONLY RUN THIS SCRIPT ON A NEW MACHINE! This script will wipe your ~/.vimrc without making a backup.
+The scripts in this repo assume you already have vim or tmux installed. These scripts simply configure the tool.
 
-This script assumes you already have vim installed. Run the following to configure vim:
+## How to use it
 
+Clone this repo to your local machine. 
+
+### vim
+
+Run the following from the root of this repo:
 ```
-./setup_vim.sh
+sudo ./setup_vim.sh
 ```
 
+### tmux
+Run the following from the root of this repo:
+```
+sudo ./setup_tmux.sh
+```
+
+## Restoring from backup
+
+If this repo overwrote one of your precious config files, no need to worry. The `backup` directory from the root of this repo makes a timestamped directory of backups. To restore a backed up file, manually copy it from the backup directory to its approriate location. 
