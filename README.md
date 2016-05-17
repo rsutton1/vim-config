@@ -31,6 +31,8 @@ To create a new tmux session with the tn tool, start tn with the name of your se
 tn my-new-session
 ```
 
+After running `setup_tmux.sh`, tn will be in your path so you can run it from any directory.
+
 By default, tn creates three windows in your session: editor, service, and admin. This is how I like my tmux windows set up. If you want to change the window configuration, feel free to edit `~/.tmux-windows.json` to your liking. For each window, you can define the attributes for `name`, `workdir`, and `command` which changes the window name, working directory, and command that will be running in the window, respectively. Only `name` is required.
 
 ## Restoring from backup
