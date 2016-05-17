@@ -7,7 +7,11 @@ These scripts are [idempotent](http://stackoverflow.com/a/1077421). This means i
 
 ## How to use it
 
-Clone this repo to your local machine. 
+Clone this repo to your local machine:
+```
+git clone git@github.com:rsutton1/vim-config.git
+cd vim-config
+```
 
 ### vim
 
