@@ -2,7 +2,7 @@
 
 # create backup directory using a timestamp for the current time
 timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
-vim_backupdir=$(pwd)/backup/tmux/$timestamp
+backupdir=$(pwd)/backup/tmux/$timestamp
 mkdir -p $backupdir
 
 # tmux configuration
