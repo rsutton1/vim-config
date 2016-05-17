@@ -2,9 +2,10 @@
 from subprocess import call
 import json
 import sys
+import os
 
 windows=[]
-with open('tmux-windows.json') as json_str:
+with open(os.environ['HOME']+'/.tmux-windows.json') as json_str:
     data = json.load(json_str)
 
 if len(data['windows'])==0:
