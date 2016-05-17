@@ -1,7 +1,9 @@
 # vim-config
-Contains scripts to setup vim and tmux with the Rob Sutton preferred configuration on a new machine.
+This repo contains scripts to configure vim and tmux with my preferred configuration.
 
-The scripts in this repo assume you already have vim or tmux installed. These scripts simply configure the tool.
+The scripts in this repo assume you already have vim or tmux installed. 
+
+These scripts are [idempotent](http://stackoverflow.com/a/1077421). This means if the configuration ever gets into a weird state, you can simply rerun these scripts to start over.
 
 ## How to use it
 
@@ -22,4 +24,4 @@ sudo ./setup_tmux.sh
 
 ## Restoring from backup
 
-If this repo overwrote one of your precious config files, no need to worry. The `backup` directory from the root of this repo makes a timestamped directory of backups. To restore a backed up file, manually copy it from the backup directory to its approriate location. 
+If this repo overwrote one of your precious config files, no need to worry. The `backup` directory from the root of this repo makes a timestamped directory of backups. Backups of tmux files are in `backup/tmux` and backups of vim files are in `backup/vim`. To restore a backed up file, manually copy it from the backup directory to its approriate location. 
