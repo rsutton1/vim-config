@@ -2,7 +2,6 @@
 	"windows": [
 	{
 		"name": "editor",
-		"workdir": "/home/rsutton/Desktop",
 		"command": "vim"
 	},
 	{

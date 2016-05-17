@@ -22,6 +22,13 @@ Run the following from the root of this repo:
 sudo ./setup_tmux.sh
 ```
 
+To create a new tmux session with the tn tool, start tn with the name of your session:
+```
+tn my-new-session
+```
+
+By default, tn creates three windows in your session: editor, service, and admin. This is how I like my tmux windows set up. If you want to change the window configuration, feel free to edit `~/.tmux-windows.json` to your liking. For each window, you can define the attributes for `name`, `workdir`, and `command` which changes the window name, working directory, and command that will be running in the window, respectively. Only `name` is required.
+
 ## Restoring from backup
 
 If this repo overwrote one of your precious config files, no need to worry. The `backup` directory from the root of this repo makes a timestamped directory of backups. Backups of tmux files are in `backup/tmux` and backups of vim files are in `backup/vim`. To restore a backed up file, manually copy it from the backup directory to its approriate location. 
