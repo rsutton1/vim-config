@@ -3,10 +3,13 @@
 	{
 		"name": "editor",
 		"workdir": "/home/rsutton/Desktop",
-		"command": "vim testing.txt"
+		"command": "vim"
 	},
 	{
 		"name": "service"
+	},
+	{
+		"name": "admin"
 	}
 	]
 }
