@@ -1,5 +1,5 @@
 # vim-config
-This repo contains scripts to configure vim and tmux with my preferred configuration.
+This repo contains scripts to configure my developer tools (vim, tmux, and bash) with my preferred configuration.
 
 The scripts in this repo assume you already have vim or tmux installed. 
 
@@ -37,6 +37,12 @@ After running `setup_tmux.sh`, tn will be in your path so you can run it from an
 
 By default, tn creates three windows in your session: editor, service, and admin. This is how I like my tmux windows set up. If you want to change the window configuration, feel free to edit `~/.tmux-windows.json` to your liking. For each window, you can define the attributes for `name`, `workdir`, and `command` which changes the window name, working directory, and command that will be running in the window, respectively. Only `name` is required.
 
+### bash
+Run the following from the root of this repo:
+```
+sudo ./setup_bash.sh
+```
 ## Restoring from backup
 
-If this repo overwrote one of your precious config files, no need to worry. The `backup` directory from the root of this repo makes a timestamped directory of backups. Backups of tmux files are in `backup/tmux` and backups of vim files are in `backup/vim`. To restore a backed up file, manually copy it from the backup directory to its approriate location. 
+
+If this repo overwrote one of your precious config files, no need to worry. The `backup` directory from the root of this repo makes a timestamped directory of backups. Backups of vim, tmux, and bash files are in `backup/{vim,tmux,bash}`, respectively. To restore a backed up file, manually copy it from the backup directory to its approriate location. 
