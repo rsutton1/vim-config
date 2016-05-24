@@ -10,6 +10,7 @@ mv ~/.tmux/plugins $backupdir
 
 # install tmux plugin manager
 mkdir -p ~/.tmux/plugins/tpm
+chown -R $SUDO_USER:$SUDO_USER ~/.tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # tmux configuration
