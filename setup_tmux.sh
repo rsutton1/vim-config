@@ -5,6 +5,13 @@ timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
 backupdir=$(pwd)/backup/tmux/$timestamp
 mkdir -p $backupdir
 
+# backup tmux plugins
+mv ~/.tmux/plugins $backupdir
+
+# install tmux plugin manager
+mkdir -p ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # tmux configuration
 mv ~/.tmux.conf $backupdir
 ln -s $(pwd)/_tmux.conf ~/.tmux.conf
