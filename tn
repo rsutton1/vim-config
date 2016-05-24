@@ -24,9 +24,9 @@ for window in windows:
 
     command_arg = ""
     if 'command' in window:
-        command_arg = window['command']
+        command_arg = "'" + window['command'] + "'"
 
-    cmd = "tmux new-window -dk -t "+str(i)+" -n "+window['name']+" "+workdir_arg+" '"+command_arg+"'"
+    cmd = "tmux new-window -dk -t "+str(i)+" -n "+window['name']+" "+workdir_arg+" "+command_arg
 
     call(cmd, shell=True)
 
