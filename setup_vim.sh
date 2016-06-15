@@ -9,6 +9,10 @@ mkdir -p $backupdir
 mv ~/.vimrc $backupdir
 ln -s $(pwd)/_vimrc ~/.vimrc
 
+# link vimperator configuration for Firefox, in case it's installed
+mv ~/.vimperatorrc $backupdir
+ln -s $(pwd)/_vimperatorrc ~/.vimperatorrc 
+
 # install vim plugins
 mv ~/.vim $backupdir
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
