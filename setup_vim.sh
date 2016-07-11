@@ -25,3 +25,4 @@ git clone https://github.com/jlanzarotta/bufexplorer
 git clone https://github.com/tomtom/tcomment_vim
 git clone https://github.com/tpope/vim-surround
 git clone git://github.com/tpope/vim-jdaddy.git
+git clone git://github.com/tpope/vim-fireplace.git
