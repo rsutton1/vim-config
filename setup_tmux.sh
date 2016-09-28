@@ -26,10 +26,13 @@ mv /usr/local/bin/tn $backupdir
 chmod 0755 tn
 ln -s $(pwd)/tn /usr/local/bin/tn
 
-#setup tmuxinator
+#install and setup tmuxinator
 gem install tmuxinator
 mv ~/.bin/tmuxinator.bash $backupdir
 mkdir ~/.bin/
 ln -s $(pwd)/tmuxinator.bash ~/.bin/tmuxinator.bash
 source ~/.bin/tmuxinator.bash
 echo "source ~/.bin/tmuxinator.bash" >> ~/.bashrc
+mv ~/.tmuxinator/VM.yml $backupdir
+mkdir ~/.tmuxinator
+ln -s $(pwd)/VM.yml ~/.tmuxinator/VM.yml
