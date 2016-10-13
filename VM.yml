@@ -31,6 +31,6 @@ windows:
   - editor:
       panes:
         - cd /opt/code; vim
-  - cloudcutter: cd /opt/code/cloudcutter; clear
-  - cloudcutter_git: cd /opt/code/cloudcutter; clear
-  - rjmetrics: cd /opt/code/RJMetrics; clear
+  - cloudcutter: cd /opt/code/cloudcutter; assume-prod-admin-global
+  - cloudcutter_git: cd /opt/code/cloudcutter; git pull
+  - rjmetrics: cd /opt/code/RJMetrics; git pull; sudo apt-get install exuberant-ctags --assume-yes; ctags -R *
