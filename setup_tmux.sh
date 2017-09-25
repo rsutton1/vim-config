@@ -27,7 +27,7 @@ chmod 0755 tn
 ln -s $(pwd)/tn /usr/local/bin/tn
 
 #install and setup tmuxinator
-gem install tmuxinator
+gem install tmuxinator -v 0.8.1
 mv ~/.bin/tmuxinator.bash $backupdir
 mkdir ~/.bin/
 ln -s $(pwd)/tmuxinator.bash ~/.bin/tmuxinator.bash
