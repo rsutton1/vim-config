@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt-get -y install curl
+
 # create backup directory using a timestamp for the current time
 timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
 backupdir=$(pwd)/backup/vim/$timestamp
