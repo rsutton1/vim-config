@@ -18,3 +18,5 @@ for prefix in ['i', 'n', 'v']
         exe prefix . "noremap " . key . " <Nop>"
     endfor
 endfor
+
+inoremap jj <ESC>
