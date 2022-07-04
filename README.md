@@ -1,3 +1,7 @@
+# Archived
+
+This repository is now archived. I no longer use this repository. To see how I currently manage my dotfiles, see https://github.com/rsutton1/dotfiles .
+
 # vim-config
 This repo contains scripts to configure my developer tools (vim, tmux, and bash) with my preferred configuration.
 
